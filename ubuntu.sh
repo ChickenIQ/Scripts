@@ -10,7 +10,7 @@ sudo apt autoremove -y
 # Shell
 sudo chsh $USER -s /usr/bin/fish
 sudo chmod -x /etc/update-motd.d/*
-# curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher install PatrickF1/fzf.fish
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher install PatrickF1/fzf.fish"
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
 touch ~/.config/fish/config.fish
