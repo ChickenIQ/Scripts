@@ -14,7 +14,7 @@ fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/fun
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
 touch ~/.config/fish/config.fish
-echo -e "# Disable welcome message
+echo "# Disable welcome message
 	set fish_greeting
 	
 	# Environment variables
