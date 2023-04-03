@@ -10,8 +10,9 @@ sudo apt autoremove -y
 # Shell
 sudo chsh $USER -s /usr/bin/fish
 sudo chmod -x /etc/update-motd.d/*
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | . && fisher install jorgebucaran/fisher
-fisher install PatrickF1/fzf.fish
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish 
+fish -c fisher install jorgebucaran/fisher
+fish -c fisher install PatrickF1/fzf.fish
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
 touch ~/.config/fish/config.fish
@@ -33,9 +34,9 @@ echo -e '# Disable welcome message
 	
 	# Binds
 	bind \e\[3\;5~ kill-word
-    	bind \b backward-kill-path-component
-    	bind \e\[1\;5H beginning-of-line
-    	bind \e\[1\;5F end-of-line' > ~/.config/fish/config.fish
+	bind \b backward-kill-path-component
+	bind \e\[1\;5H beginning-of-line
+	bind \e\[1\;5F end-of-line' > ~/.config/fish/config.fish
 
 # Supress ssh login message
 sudo touch ~/.hushlogin
