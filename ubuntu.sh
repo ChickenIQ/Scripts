@@ -14,26 +14,28 @@ fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/fun
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
 touch ~/.config/fish/config.fish
-echo "# Disable welcome message
-      set fish_greeting
-      # Environment variables
-      export EDITOR='nvim'
+echo "
+# Disable welcome message
+set fish_greeting
+# Environment variables
+export EDITOR='nvim'
 
-      # Aliases
-      alias vim='nvim'
-      alias sudo='sudo '
-      alias svim='sudo '
-      alias sv='sudo -e'
-      alias v='nvim'
-      alias ls='ls -a'
-      alias tree='tree -a -I .git'
-      starship init fish | source
+# Aliases
+alias vim='nvim'
+alias sudo='sudo '
+alias svim='sudo '
+alias sv='sudo -e'
+alias v='nvim'
+alias ls='ls -a'
+alias tree='tree -a -I .git'
+starship init fish | source
 
-      # Binds
-      bind \e\[3\;5~ kill-word
-      bind \b backward-kill-path-component
-      bind \e\[1\;5H beginning-of-line
-      bind \e\[1\;5F end-of-line" > ~/.config/fish/config.fish
+# Binds
+bind \e\[3\;5~ kill-word
+bind \b backward-kill-path-component
+bind \e\[1\;5H beginning-of-line
+bind \e\[1\;5F end-of-line
+" > ~/.config/fish/config.fish
 
 # Supress ssh login message
 sudo touch ~/.hushlogin
