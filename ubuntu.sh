@@ -14,6 +14,7 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher install PatrickF1/fzf.fish
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
+touch ~/.config/fish/config.fish
 echo -e '# Disable welcome message
 		set fish_greeting
 
