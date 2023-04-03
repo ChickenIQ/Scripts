@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Packages
 sudo apt update -y
