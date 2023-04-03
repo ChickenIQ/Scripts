@@ -3,7 +3,7 @@
 # Packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install neovim btop fish docker.io docker-compose docker-clean fzf -y
+sudo apt install neovim btop fish docker.io docker-compose docker-clean fzf nala -y
 sudo apt purge snapd -y
 sudo apt autoremove -y
 
