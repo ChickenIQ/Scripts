@@ -7,6 +7,7 @@ sudo apt install neovim btop fish docker.io docker-compose docker-clean fzf nala
 sudo apt purge snapd -y
 sudo apt autoremove -y
 sudo systemctl enable --now firewalld
+sudo systemctl daemon-reload
 
 # Docker Swarm
 sudo firewall-cmd --permanent --zone public --add-port 2377/tcp
