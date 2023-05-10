@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Add user
+sudo useradd -m -s /usr/bin/bash -G sudo ubuntu
+sudo su ubuntu
+
 # Packages
 sudo apt update -y
 sudo apt upgrade -y
