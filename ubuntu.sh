@@ -3,19 +3,11 @@
 # Packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install neovim btop fish docker.io docker-compose docker-clean fzf nala firewalld -y
+sudo apt install neovim btop fish docker.io docker-compose fzf firewalld -y
 sudo apt purge snapd -y
 sudo apt autoremove -y
 sudo systemctl enable --now firewalld
 sudo systemctl daemon-reload
-
-# Docker Swarm
-sudo firewall-cmd --permanent --zone public --add-port 2377/tcp
-sudo firewall-cmd --permanent --zone public --add-port 7946/tcp
-sudo firewall-cmd --permanent --zone public --add-port 7946/udp
-sudo firewall-cmd --permanent --zone public --add-port 4789/udp
-sudo firewall-cmd --reload
-sudo systemctl restart docker
 
 # Shell
 sudo chsh $USER -s /usr/bin/fish
