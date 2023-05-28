@@ -3,11 +3,18 @@
 # Packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install neovim btop fish docker.io docker-compose fzf firewalld -y
+sudo apt install neovim btop fish docker.io docker-compose docker-clean fzf firewalld -y
 sudo apt purge snapd -y
 sudo apt autoremove -y
 sudo systemctl enable --now firewalld
 sudo systemctl daemon-reload
+
+echo '{"iptables": false}' | sudo tee /etc/docker/daemon.json
+
+sudo firewall-cmd --zone=public --add-masquerade --permanent
+sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+sudo firewall-cmd --reload
+sudo systemctl restart docker
 
 # Shell
 sudo chsh $USER -s /usr/bin/fish
