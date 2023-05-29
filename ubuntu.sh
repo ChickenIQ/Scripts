@@ -12,7 +12,7 @@ sudo systemctl daemon-reload
 echo '{"iptables": false}' | sudo tee /etc/docker/daemon.json
 
 sudo firewall-cmd --zone=public --add-masquerade --permanent
-sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0 --add-interface=docker_gwbridge
 sudo firewall-cmd --reload
 sudo systemctl restart docker firewalld
 
