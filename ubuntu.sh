@@ -14,7 +14,7 @@ echo '{"iptables": false}' | sudo tee /etc/docker/daemon.json
 sudo firewall-cmd --zone=public --add-masquerade --permanent
 sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
 sudo firewall-cmd --reload
-sudo systemctl restart docker
+sudo systemctl restart docker firewalld
 
 # Shell
 sudo chsh $USER -s /usr/bin/fish
