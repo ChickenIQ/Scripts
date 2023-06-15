@@ -19,7 +19,8 @@ sudo systemctl restart docker firewalld
 # Shell
 sudo chsh $USER -s /usr/bin/fish
 sudo chmod -x /etc/update-motd.d/*
-fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher install PatrickF1/fzf.fish'
+# fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher install PatrickF1/fzf.fish'
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher install jethrokuan/fzf'
 fish -c 'fisher update'
 curl -sS https://starship.rs/install.sh | sudo sh -s -- -y
 
