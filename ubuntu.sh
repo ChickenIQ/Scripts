@@ -9,6 +9,8 @@ sudo apt autoremove -y
 sudo systemctl enable --now firewalld
 sudo systemctl daemon-reload
 
+sudo pro config set apt_news=false
+
 echo '{"iptables": false}' | sudo tee /etc/docker/daemon.json
 
 sudo firewall-cmd --zone=public --add-masquerade --permanent
